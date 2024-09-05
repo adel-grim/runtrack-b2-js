@@ -1,13 +1,13 @@
-// Fonction myUpperCase qui convertit une chaîne en majuscule sans utiliser toUpperCase
+
 function myUpperCase(str) {
-    let upperStr = ''; // Variable qui contiendra la nouvelle chaîne en majuscule
+    let upperStr = ''; 
 
     for (let i = 0; i < str.length; i++) {
-        let charCode = str[i].charCodeAt(0); // Récupérer le code ASCII du caractère
+        let charCode = str[i].charCodeAt(0); 
 
         // Si le caractère est une lettre minuscule (entre 'a' et 'z')
         if (charCode >= 97 && charCode <= 122) {
-            // Convertir en majuscule en soustrayant 32 (différence entre minuscule et majuscule dans ASCII)
+           
             upperStr += String.fromCharCode(charCode - 32);
         } else {
             // Si ce n'est pas une lettre minuscule, on le garde tel quel
@@ -18,10 +18,10 @@ function myUpperCase(str) {
     return upperStr; // Retourner la chaîne convertie
 }
 
-// Fonction convertText appelée lorsque le bouton est cliqué
+// Fonction appelée lorsque le bouton est cliqué
 function convertText() {
     const inputText = document.getElementById('inputText').value; // Récupérer la valeur du champ texte
-    const result = myUpperCase(inputText); // Passer le texte en majuscule
+    const result = myUpperCase(inputText); // Passer le texte en maj
     console.log(result); // Afficher le résultat dans la console
-    document.getElementById('result').textContent = result; // Afficher le résultat à l'écran
+    document.getElementById('result').textContent = result; // resultat
 }
